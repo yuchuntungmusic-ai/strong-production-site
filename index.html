@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strong Production Limited | 音樂．公關．製作</title>
+    <style>
+        /* --- 基礎設定 --- */
+        :root {
+            --primary-color: #D4AF37; /* 香檳金 */
+            --bg-color: #0a0a0a;      /* 深黑 */
+            --text-light: #f4f4f4;
+            --text-grey: #a0a0a0;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        /* --- 導航欄 --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: rgba(0,0,0,0.9);
+            position: fixed;
+            width: 90%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links a {
+            margin-left: 30px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Hero Section (首頁) --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); /* 暫用素材圖，建議換成你的 Showreel 截圖 */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 40px;
+            color: var(--text-grey);
+        }
+
+        .cta-button {
+            padding: 15px 40px;
+            background-color: var(--primary-color);
+            color: #000;
+            font-weight: bold;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: #fff;
+        }
+
+        /* --- 關於我們 --- */
+        .section {
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            text-align: left;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* --- 服務範疇 --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: #1a1a1a;
+            padding: 40px 20px;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        /* --- 成功案例 --- */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            height: 250px;
+            background-color: #333; /* 這裡放圖片 */
+            overflow: hidden;
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+            opacity: 0.7;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+            opacity: 0.3;
+        }
+
+        .portfolio-info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            pointer-events: none;
+        }
+
+        /* --- 聯絡我們 --- */
+        .contact-section {
+            background-color: #111;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-box {
+            padding: 20px;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #000;
+            color: #666;
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; } /* 手機版暫隱藏選單 */
+            .about-content { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 導航 -->
+    <nav>
+        <div class="logo">STRONG PRODUCTION</div>
+        <div class="nav-links">
+            <a href="#about">關於我們</a>
+            <a href="#services">服務範疇</a>
+            <a href="#portfolio">成功案例</a>
+            <a href="#contact">聯絡我們</a>
+        </div>
+    </nav>
+
+    <!-- Hero 區域 -->
+    <header class="hero">
+        <h1>為品牌注入 <span style="color:var(--primary-color)">音樂靈魂</span> 的<br>公關製作公司</h1>
+        <p>由資深音樂人余震東主理，結合「音樂創作 x 公關宣傳 x 影視製作」，為你的品牌打造獨一無二的市場聲音。</p>
+        <a href="#contact" class="cta-button">獲取報價 / 合作諮詢</a>
+    </header>
+
+<!-- 合作夥伴 Logo Wall -->
+<div class="logo-scroll-container">
+    <p style="text-align: center; color: #666; font-size: 14px; margin-bottom: 20px; letter-spacing: 1px;">TRUSTED BY / 曾合作機構與品牌</p>
+    
+    <div class="logo-grid">
+        <!-- 在這裡放入你的 Logo 圖片 -->
+        <!-- 建議把 Logo 全部轉成單色(白色或是金色)會更高級，如果不行，原色也可以 -->
+        
+        <img src="d6280e_8e8ff12f042d47f2be42a597347fa7f4" alt="當代唐人藝術中心" class="partner-logo">
+        <img src="logo_acghk.png" alt="ACGHK" class="partner-logo">
+        <img src="logo_bni.png" alt="BNI" class="partner-logo">
+        <img src="logo_rotary.png" alt="Rotary" class="partner-logo">
+        <img src="logo_lions.png" alt="Lions Club" class="partner-logo">
+        <img src="logo_honger.png" alt="框格音樂" class="partner-logo">
+        <img src="logo_moodimochi.png" alt="Moodimochi" class="partner-logo">
+        <img src="logo_hkfyg.png" alt="HKFYG" class="partner-logo">
+        
+        <!-- 你可以繼續複製 <img ...> 來增加更多 Logo -->
+    </div>
+</div>
+
+<style>
+    /* Logo Wall 樣式 */
+    .logo-scroll-container {
+        background-color: #050505; /* 比背景稍微深一點或淺一點 */
+        padding: 40px 0;
+        border-bottom: 1px solid #222;
+        overflow: hidden; /* 防止跑版 */
+    }
+
+    .logo-grid {
+        display: flex;
+        flex-wrap: wrap; /* 允許換行 */
+        justify-content: center; /* 居中排列 */
+        align-items: center; /* 垂直居中 */
+        gap: 40px; /* Logo 之間的間距 */
+        max-width: 1000px;
+        margin: 0 auto; /* 區塊置中 */
+        padding: 0 20px;
+    }
+
+    .partner-logo {
+        height: 40px; /* 統一 Logo 高度，保持整齊 */
+        width: auto;
+        opacity: 0.6; /* 稍微透明，讓它不要太搶眼 */
+        filter: grayscale(100%); /* 變成黑白 (更高級)，如果不想要黑白，把這行刪掉 */
+        transition: 0.3s;
+    }
+
+    .partner-logo:hover {
+        opacity: 1; /* 滑鼠移上去變亮 */
+        filter: grayscale(0%); /* 滑鼠移上去變回彩色 */
+        transform: scale(1.1); /* 稍微放大 */
+    }
+
+    @media (max-width: 768px) {
+        .partner-logo {
+            height: 30px; /* 手機版 Logo 小一點 */
+            gap: 20px;
+        }
+    }
+</style>
+
+
+
+    <!-- 關於我們 -->
+    <section id="about" class="section">
+        <h2>關於我們</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>音樂與商業的完美結合</h3>
+                <p>Strong Production Limited 創辦人 <span class="highlight">余震東先生 (Yu Chun Tung)</span> ，師承著名音樂人<span class="highlight">林慕德先生</span>。跟隨林先生進修音樂創作及研習洗腦廣告歌的商業思維。</p>
+                <p>我們不只是一間 Production House，更是一間懂得用「聽覺」做行銷的公關公司。從2013年至今，我們與<span class="highlight">「框格音樂事務所」</span>及多個國際品牌合作，擁有超過150首原創作品及無數次大型活動策劃經驗。 </p>
+                <p> 與香港藝人以及高影娛樂有限公司創辦人<span class="highlight">崔碧珈小姐</span>為長期戰略夥伴，共同合作策劃多個不同類型的廣告製作及公關活動。 </p>
+                <p><strong>我們的優勢：</strong>擁有可以中國/香港/英國/法國/新加坡/馬來西亞各地拍攝及公關團隊，能為品牌提供一條龍的宣傳方案。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服務範疇 -->
+    <section id="services" class="section" style="background-color: #0f0f0f;">
+        <h2>我們的專業服務</h2>
+        <p style="color:#888; margin-bottom: 20px;">一站式解決方案，助你達成商業目標</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">♫</div>
+                <h3>品牌音樂 & 洗腦歌</h3>
+                <p>由林慕德徒弟親自監修，創作獨一無二的品牌主題曲 (Jingle)，讓客戶「聽」過不忘。</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📢</div>
+                <h3>全方位公關 & KOL</h3>
+                <p>發佈全球各地新聞稿 (新浪/網易/明報)、安排全球各地 KOL 宣傳、社交媒體代營運 (Retainer)。</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎥</div>
+                <h3>專業影片製作</h3>
+                <p>產品廣告片、企業宣傳片、活動花絮 (Event Highlight)、微電影製作。</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🤝</div>
+                <h3>活動策劃</h3>
+                <p>記者招待會、品牌發佈會、藝術展覽 Opening、考察團安排。</p>
+            </div>
+        </div>
+    </section>
+<!-- 價格方案區域 -->
+<section class="section" style="background-color: #111;">
+    <h2>熱賣月費方案</h2>
+    <p style="color:#888; margin-bottom: 40px;">選擇最適合你的增長計劃，讓專業團隊為你代勞</p>
+    
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+        
+        <!-- 方案 A: 入門 -->
+        <div style="background: #1a1a1a; padding: 30px; border: 1px solid #333; width: 300px; text-align: center;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 10px;">創業起步 Plan</h3>
+            <div style="font-size: 2.5rem; color: var(--primary-color); font-weight: bold; margin-bottom: 20px;">$18,800<span style="font-size: 1rem; color: #666;">/月</span></div>
+            <ul style="text-align: left; color: #ccc; list-style: none; padding: 0; line-height: 2;">
+                <li>✓ 每月 4 篇 FB/IG 帖文</li>
+                <li>✓ 基礎廣告投放設定</li>
+                <li>✓ 每季 1 次簡單短片拍攝</li>
+                <li>✓ 季度成效報告</li>
+            </ul>
+            <a href="https://wa.me/85212345678?text=我想查詢$18,800創業方案" style="display: block; margin-top: 20px; padding: 10px; border: 1px solid var(--primary-color); color: var(--primary-color);">查詢此方案</a>
+        </div>
+
+        <!-- 方案 B: 皇牌 (推薦) -->
+        <div style="background: #222; padding: 30px; border: 2px solid var(--primary-color); width: 300px; text-align: center; transform: scale(1.05);">
+            <div style="background: var(--primary-color); color: #000; display: inline-block; padding: 5px 15px; font-size: 12px; font-weight: bold; margin-bottom: 15px;">最多客戶選擇</div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 10px;">企業增長 Plan</h3>
+            <div style="font-size: 2.5rem; color: var(--primary-color); font-weight: bold; margin-bottom: 20px;">$28,800<span style="font-size: 1rem; color: #666;">/月</span></div>
+            <ul style="text-align: left; color: #fff; list-style: none; padding: 0; line-height: 2;">
+                <li>✓ <strong>每月 8 篇</strong> FB/IG 專業帖文</li>
+                <li>✓ 每月 1 次 <strong>KOL/微網紅</strong> 宣傳</li>
+                <li>✓ 每月 1 條 <strong>30秒 Reels/短片</strong></li>
+                <li>✓ 專人 Account Manager 跟進</li>
+            </ul>
+            <a href="https://wa.me/85212345678?text=我想查詢$28,800企業增長方案" style="display: block; margin-top: 20px; padding: 10px; background: var(--primary-color); color: #000; font-weight: bold;">立即開始</a>
+        </div>
+
+        <!-- 方案 C: 高端 -->
+        <div style="background: #1a1a1a; padding: 30px; border: 1px solid #333; width: 300px; text-align: center;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 10px;">全方位公關 Plan</h3>
+            <div style="font-size: 2.5rem; color: var(--primary-color); font-weight: bold; margin-bottom: 20px;">$42,800<span style="font-size: 1rem; color: #666;">/月</span></div>
+            <ul style="text-align: left; color: #ccc; list-style: none; padding: 0; line-height: 2;">
+                <li>✓ <strong>全套社交媒體代管</strong></li>
+                <li>✓ <strong>中港新聞稿</strong>發佈 (網易/新浪)</li>
+                <li>✓ 品牌主題曲創作 (Jingle)</li>
+                <li>✓ 季度線下活動策劃支援</li>
+            </ul>
+            <a href="https://wa.me/85212345678?text=我想查詢$42,800全方位公關方案" style="display: block; margin-top: 20px; padding: 10px; border: 1px solid var(--primary-color); color: var(--primary-color);">查詢此方案</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- 成功案例 (Portfolio) - 只保留精選 3 項 -->
+<section id="portfolio" class="section">
+    <h2>精選參與項目</h2>
+    <p style="color:#888; margin-bottom: 40px;">以專業製作與公關策略，為客戶創造最大價值</p>
+    
+    <div class="portfolio-grid">
+        <!-- 案例 1: 藝術與豪宅 (強調高端) -->
+        <div class="portfolio-item">
+            <!-- 請記得將 src 改成你實際的照片檔名 -->
+            <img src="project1.jpg" alt="唐人藝術中心">
+            <div class="portfolio-info">
+                <h3>當代唐人藝術中心</h3>
+                <p>展覽策劃 & After Party (山頂豪宅)</p>
+            </div>
+        </div>
+        
+        <!-- 案例 2: 海外品牌 (強調國際化) -->
+        <div class="portfolio-item">
+            <img src="project2.jpg" alt="Moodimochi">
+            <div class="portfolio-info">
+                <h3>Moodimochi (英國品牌)</h3>
+                <p>全方位市場推廣 & 主題曲製作</p>
+            </div>
+        </div>
+        
+        <!-- 案例 3: 明星發佈會 (強調娛樂圈資源) -->
+        <div class="portfolio-item">
+            <img src="project3.jpg" alt="崔碧珈發佈會">
+            <div class="portfolio-info">
+                <h3>藝人崔碧珈新歌發佈</h3>
+                <p>九龍香格里拉酒店記者會</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- 聯絡我們 -->
+    <section id="contact" class="section contact-section">
+        <h2>想知道你的品牌如何透過洗腦歌爆紅</h2>
+        <p> 每天名額有限，立即預約 15 分鐘免費品牌診斷 (價值 $2,000)，讓我們為你分析現有的宣傳漏洞！</p>
+        
+        <div class="contact-container">
+            <div class="contact-box">
+                WhatsApp: +852 6500 0274 <span style="font-size:14px; color:#fff;">(點擊聯絡)</span>
+            </div>
+            <div class="contact-box">
+                Email: info@strongproduction.com
+            </div>
+            <p style="color: #666; font-size: 14px;">Office: Unit 2100A, 21/F One Pacific Centre, 414 Kwun Tong Road, Kwun Tong 
+</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Strong Production Limited. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+<!-- 懸浮 WhatsApp 按鈕代碼 -->
+<a href="https://wa.me/85212345678?text=你好，我對StrongProduction的服務感興趣，想了解更多。" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Us">
+</a>
+
+<style>
+    .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 40px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+    }
+
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+        box-shadow: 2px 2px 10px #666;
+    }
+
+    .whatsapp-float img {
+        width: 35px;
+        height: 35px;
+    }
+</style>
+
