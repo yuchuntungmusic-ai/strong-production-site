@@ -8,19 +8,8 @@
   <meta name="keywords" content="品牌主題曲, 洗腦廣告歌, jingle製作香港, 品牌音樂製作, 廣告歌製作, 品牌推廣香港, Strong Production">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.strongproductionhk.com/blog/brand-jingle.html">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="為什麼品牌需要一首主題曲？讓旋律為你說話！">
-  <meta property="og:url" content="https://www.strongproductionhk.com/blog/brand-jingle.html">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "為什麼你的品牌需要一首主題曲？讓旋律為你說話！",
-    "datePublished": "2026-03-30",
-    "author": {"@type": "Organization", "name": "Strong Production Limited", "url": "https://www.strongproductionhk.com"},
-    "publisher": {"@type": "Organization", "name": "Strong Production Limited"},
-    "mainEntityOfPage": "https://www.strongproductionhk.com/blog/brand-jingle.html"
-  }
+  {"@context":"https://schema.org","@type":"Article","headline":"為什麼你的品牌需要一首主題曲？讓旋律為你說話！","datePublished":"2026-03-30","author":{"@type":"Organization","name":"Strong Production Limited","url":"https://www.strongproductionhk.com"},"publisher":{"@type":"Organization","name":"Strong Production Limited"},"mainEntityOfPage":"https://www.strongproductionhk.com/blog/brand-jingle.html","keywords":"品牌主題曲, 洗腦廣告歌, jingle製作香港"}
   </script>
   <style>
     :root{--sky:#29ABE2;--sky-dark:#1a8bbf;--sky-light:#e8f7fd;--sky-mid:#b3e5f8;--white:#fff;--dark:#0d1b2a;--grey:#5a6a7a;--grey-light:#f4f9fc;--border:#d0ecf8}
@@ -35,11 +24,13 @@
     .nav-center a:hover,.nav-center a.active{color:var(--sky);background:var(--sky-light)}
     .nav-cta{background:var(--sky)!important;color:#fff!important;padding:12px 26px!important;border-radius:100px;font-weight:800!important}
     .nav-cta:hover{background:var(--dark)!important}
-    .article-hero{background:linear-gradient(140deg,#f0faff 0%,#fff 60%);padding:70px 24px 50px;text-align:center;border-bottom:1px solid var(--border)}
-    .post-cat{display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--sky);background:var(--sky-light);border:1px solid var(--sky-mid);padding:6px 18px;border-radius:100px;margin-bottom:20px}
-    .article-hero h1{font-size:2.4rem;font-weight:900;line-height:1.25;max-width:800px;margin:0 auto 20px}
-    .article-hero h1 em{color:var(--sky);font-style:normal}
-    .post-meta{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-size:.82rem;color:var(--grey)}
+    .article-hero{position:relative;overflow:hidden;height:420px}
+    .article-hero img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.1) 0%,rgba(13,27,42,0.85) 100%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:48px 24px;text-align:center}
+    .post-cat{display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#fff;background:rgba(41,171,226,0.85);padding:6px 18px;border-radius:100px;margin-bottom:16px}
+    .hero-overlay h1{color:#fff;font-size:2.4rem;font-weight:900;line-height:1.25;max-width:800px;margin:0 auto 18px}
+    .hero-overlay h1 em{color:#29ABE2;font-style:normal}
+    .post-meta{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-size:.82rem;color:rgba(255,255,255,0.8)}
     .article-wrap{max-width:800px;margin:0 auto;padding:64px 24px 80px}
     .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--sky);font-size:.88rem;font-weight:700;margin-bottom:48px}
     .article-body{font-size:1.05rem;line-height:1.95;color:#2a3a4a}
@@ -67,11 +58,12 @@
     .contact-info a{color:rgba(255,255,255,0.65);font-size:.88rem}
     footer{background:#0d1b2a;color:rgba(255,255,255,0.45);padding:32px 60px;text-align:center;font-size:.82rem}
     footer a{color:var(--sky)}
-    @media(max-width:768px){.article-hero h1{font-size:1.7rem}.stat-grid,.services-list{grid-template-columns:1fr}}
+    @media(max-width:768px){.article-hero{height:300px}.hero-overlay h1{font-size:1.6rem}.stat-grid,.services-list{grid-template-columns:1fr}.post-cta{padding:36px 24px}}
     @media(max-width:600px){body{padding-top:90px}.nav-center{display:none}.article-wrap{padding:40px 20px 60px}}
   </style>
 </head>
 <body>
+
 <div class="nav-wrapper">
   <nav>
     <a href="/" class="logo-text">STRONG PRODUCTION</a>
@@ -88,12 +80,15 @@
 </div>
 
 <div class="article-hero">
-  <div class="post-cat">🎵 品牌音樂策略</div>
-  <h1>為什麼你的品牌需要一首<em>主題曲</em>？<br>讓旋律為你說話！</h1>
-  <div class="post-meta">
-    <span>📅 2026年3月30日</span>
-    <span>✍️ Strong Production 團隊</span>
-    <span>⏱ 閱讀時間：5 分鐘</span>
+  <img src="/blog/pexels-odin-reyna-383507-6860630.jpg" alt="品牌主題曲錄音室｜Strong Production香港">
+  <div class="hero-overlay">
+    <div class="post-cat">🎵 品牌音樂策略</div>
+    <h1>為什麼你的品牌需要一首<em>主題曲</em>？<br>讓旋律為你說話！</h1>
+    <div class="post-meta">
+      <span>📅 2026年3月30日</span>
+      <span>✍️ Strong Production 團隊</span>
+      <span>⏱ 閱讀時間：5 分鐘</span>
+    </div>
   </div>
 </div>
 
