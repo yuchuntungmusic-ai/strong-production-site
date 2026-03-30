@@ -8,10 +8,13 @@
   <meta name="keywords" content="品牌主題曲, 洗腦廣告歌, 公關服務香港, KOL推廣, Rebranding, 品牌營銷">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.strongproductionhk.com/blog/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog · 品牌營銷洞察｜Strong Production 香港">
+  <meta property="og:url" content="https://www.strongproductionhk.com/blog/">
   <style>
-    :root{--sky:#29ABE2;--sky-dark:#1a8bbf;--sky-light:#e8f7fd;--sky-mid:#b3e5f8;--white:#fff;--dark:#0d1b2a;--grey:#5a6a7a;--grey-light:#f4f9fc;--border:#d0ecf8}
+    :root{--sky:#29ABE2;--sky-dark:#1a8bbf;--sky-light:#e8f7fd;--sky-mid:#b3e5f8;--white:#ffffff;--dark:#0d1b2a;--grey:#5a6a7a;--grey-light:#f4f9fc;--border:#d0ecf8}
     *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:"Helvetica Neue",Arial,"PingFang HK",sans-serif;color:var(--dark);background:#fff;padding-top:100px}
+    body{font-family:"Helvetica Neue",Arial,"PingFang HK",sans-serif;color:var(--dark);background:var(--white);padding-top:100px}
     a{text-decoration:none;color:inherit}
     .nav-wrapper{position:fixed;top:16px;left:0;width:100%;z-index:999;display:flex;justify-content:center;pointer-events:none}
     nav{pointer-events:auto;background:rgba(255,255,255,0.92);backdrop-filter:blur(14px);border:1px solid rgba(41,171,226,0.18);box-shadow:0 8px 32px rgba(0,0,0,0.07);display:flex;align-items:center;justify-content:space-between;padding:8px 10px 8px 20px;border-radius:100px;width:94%;max-width:1200px}
@@ -19,9 +22,9 @@
     .nav-center{display:flex;gap:4px}
     .nav-center a{font-size:.92rem;font-weight:600;color:var(--dark);padding:9px 18px;border-radius:100px;transition:all .2s}
     .nav-center a:hover,.nav-center a.active{color:var(--sky);background:var(--sky-light)}
-    .nav-cta{background:var(--sky)!important;color:#fff!important;padding:12px 26px!important;border-radius:100px;font-weight:800!important}
+    .nav-cta{background:var(--sky)!important;color:#fff!important;padding:12px 26px!important;border-radius:100px;font-weight:800!important;transition:all .2s}
     .nav-cta:hover{background:var(--dark)!important}
-    .blog-hero{background:linear-gradient(140deg,#f0faff 0%,#fff 60%);padding:80px 24px 60px;text-align:center;border-bottom:1px solid var(--border)}
+    .blog-hero{background:linear-gradient(140deg,#f0faff 0%,var(--white) 60%);padding:80px 24px 60px;text-align:center;border-bottom:1px solid var(--border)}
     .sec-label{font-size:.75rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--sky);margin-bottom:14px}
     .blog-hero h1{font-size:2.6rem;font-weight:900;letter-spacing:-1px;margin-bottom:14px}
     .blog-hero h1 em{color:var(--sky);font-style:normal}
@@ -31,10 +34,10 @@
     .topic-tag:hover,.topic-tag.active{background:var(--sky);color:#fff;border-color:var(--sky)}
     .blog-section{padding:70px 60px;max-width:1200px;margin:0 auto}
     .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-    .post-card{background:#fff;border:1.5px solid var(--border);border-radius:18px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+    .post-card{background:var(--white);border:1.5px solid var(--border);border-radius:18px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
     .post-card:hover{border-color:var(--sky);box-shadow:0 8px 32px rgba(41,171,226,0.1);transform:translateY(-4px)}
-    .post-thumb{height:180px;display:flex;align-items:center;justify-content:center;font-size:3rem}
-    .thumb-light{background:linear-gradient(135deg,var(--sky-light),var(--sky-mid))}
+    .post-card:hover img{transform:scale(1.05)}
+    .post-thumb{height:180px;display:flex;align-items:center;justify-content:center;font-size:3rem;background:#000;padding:0;overflow:hidden;}
     .post-body{padding:24px;display:flex;flex-direction:column;flex:1}
     .post-cat-tag{font-size:.7rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--sky);margin-bottom:10px}
     .post-card h2{font-size:1rem;font-weight:800;line-height:1.55;margin-bottom:10px;color:var(--dark);flex:1}
@@ -44,9 +47,9 @@
     .post-card:hover .read-more{color:var(--sky);text-decoration:underline}
     .coming-soon{border:2px dashed var(--border);border-radius:18px;padding:48px 24px;text-align:center;color:var(--grey)}
     .coming-soon p{font-size:.9rem;margin-top:8px;line-height:1.6}
-    footer{background:#0d1b2a;color:rgba(255,255,255,0.45);padding:32px 60px;text-align:center;font-size:.82rem}
+    footer{background:var(--dark);color:rgba(255,255,255,0.45);padding:32px 60px;text-align:center;font-size:.82rem}
     footer a{color:var(--sky)}
-    @media(max-width:960px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:960px){.blog-grid{grid-template-columns:repeat(2,1fr)}.topic-bar{padding:24px}}
     @media(max-width:600px){.blog-hero h1{font-size:1.8rem}.blog-section{padding:50px 20px}.blog-grid{grid-template-columns:1fr}.nav-center{display:none}}
   </style>
 </head>
@@ -84,8 +87,11 @@
 <div class="blog-section">
   <div class="blog-grid">
 
+    <!-- 文章一 -->
     <a href="/blog/brand-jingle.html" class="post-card">
-      <div class="post-thumb thumb-light">🎵</div>
+      <div class="post-thumb">
+        <img src="/blog/pexels-odin-reyna-383507-6860630.jpg" alt="品牌主題曲" style="width:100%; height:100%; object-fit:cover; opacity:0.85; transition: transform 0.5s ease;">
+      </div>
       <div class="post-body">
         <div class="post-cat-tag">品牌音樂策略</div>
         <h2>為什麼你的品牌需要一首主題曲？讓旋律為你說話！</h2>
@@ -99,12 +105,12 @@
 
     <div class="coming-soon">
       <div style="font-size:2rem">✍️</div>
-      <p><strong>更多文章即將發佈</strong><br>關注我們，第一時間獲取品牌營銷最新洞察</p>
+      <p><strong>更多文章即將發佈</strong><br>關注我們，第一時間獲取<br>品牌營銷最新洞察</p>
     </div>
 
     <div class="coming-soon">
       <div style="font-size:2rem">✍️</div>
-      <p><strong>更多文章即將發佈</strong><br>關注我們，第一時間獲取品牌營銷最新洞察</p>
+      <p><strong>更多文章即將發佈</strong><br>關注我們，第一時間獲取<br>品牌營銷最新洞察</p>
     </div>
 
   </div>
