@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>東哥說故事 Podcast ｜書籍精華分享｜Strong Production</title>
+  <meta name="description" content="好的創意，源於持續的輸入。【東哥說故事】由 Strong Production 創辦人余震東主持，為你提煉各類書籍精華，激發思維與靈感。">
+  <meta name="keywords" content="東哥說故事, 說書 Podcast, 書籍精華, 余震東, Strong Production, 知識分享">
+  <meta name="robots" content="index, follow">
+  <style>
+    :root{--sky:#29ABE2;--sky-dark:#1a8bbf;--sky-light:#e8f7fd;--sky-mid:#b3e5f8;--white:#ffffff;--dark:#0d1b2a;--grey:#5a6a7a;--grey-light:#f4f9fc;--border:#d0ecf8}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:"Helvetica Neue",Arial,"PingFang HK",sans-serif;color:var(--dark);background:var(--white);padding-top:100px}
+    a{text-decoration:none;color:inherit}
+    
+    /* 導航列 (與主頁一致) */
+    .nav-wrapper{position:fixed;top:16px;left:0;width:100%;z-index:999;display:flex;justify-content:center;pointer-events:none}
+    nav{pointer-events:auto;background:rgba(255,255,255,0.92);backdrop-filter:blur(14px);border:1px solid rgba(41,171,226,0.18);box-shadow:0 8px 32px rgba(0,0,0,0.07);display:flex;align-items:center;justify-content:space-between;padding:8px 10px 8px 20px;border-radius:100px;width:94%;max-width:1200px}
+    .logo-text{font-size:1rem;font-weight:900;color:var(--sky);letter-spacing:1px}
+    .nav-center{display:flex;gap:4px}
+    .nav-center a{font-size:.92rem;font-weight:600;color:var(--dark);padding:9px 18px;border-radius:100px;transition:all .2s}
+    .nav-center a:hover,.nav-center a.active{color:var(--sky);background:var(--sky-light)}
+    .nav-cta{background:var(--sky)!important;color:#fff!important;padding:12px 26px!important;border-radius:100px;font-weight:800!important;transition:all .2s}
+    .nav-cta:hover{background:var(--dark)!important}
+
+    /* Podcast Hero 區塊 */
+    .podcast-hero {
+      background: linear-gradient(135deg, #0d1b2a 0%, #1a3050 100%);
+      padding: 100px 24px 80px;
+      text-align: center;
+      color: white;
+    }
+    .podcast-badge {
+      display: inline-block;
+      background: rgba(41, 171, 226, 0.2);
+      border: 1px solid var(--sky);
+      color: var(--sky);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .podcast-hero h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+    .podcast-hero h1 em {
+      color: var(--sky);
+      font-style: normal;
+    }
+    .podcast-hero p {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* 概念包裝區塊 */
+    .concept-section {
+      padding: 60px 24px;
+      background: var(--sky-light);
+      text-align: center;
+    }
+    .concept-box {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+    }
+    .concept-box h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+    .concept-box p {
+      font-size: 1.05rem;
+      color: var(--grey);
+      line-height: 1.8;
+    }
+    .concept-box strong {
+      color: var(--sky-dark);
+    }
+
+    /* 播放器區塊 */
+    .player-section {
+      padding: 80px 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 40px;
+      color: var(--dark);
+    }
+    .player-container {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border: 1px solid #eee;
+    }
+
+    /* 訂閱按鈕 */
+    .subscribe-platforms {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .platform-btn {
+      padding: 12px 24px;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: 1.5px solid var(--border);
+      color: var(--dark);
+      transition: 0.2s;
+      background: white;
+    }
+    .platform-btn:hover {
+      border-color: var(--sky);
+      color: var(--sky);
+      background: var(--sky-light);
+    }
+
+    /* 頁尾 */
+    footer{background:var(--dark);color:rgba(255,255,255,0.45);padding:40px 24px;text-align:center;font-size:.82rem}
+    footer a{color:var(--sky)}
+
+    @media(max-width:768px){
+      .podcast-hero h1 {font-size: 2.2rem;}
+      .concept-box {padding: 30px 20px;}
+      .nav-center{display:none}
+    }
+  </style>
+</head>
+<body>
+
+<div class="nav-wrapper">
+  <nav>
+    <a href="/" class="logo-text">STRONG PRODUCTION</a>
+    <div class="nav-center">
+      <a href="/#about">關於我們</a>
+      <a href="/#services">服務</a>
+      <a href="/#portfolio">作品集</a>
+      <a href="/#pricing">收費</a>
+      <a href="/blog/">Blog</a>
+      <a href="/podcast.html" class="active">Podcast</a>
+    </div>
+    <a href="mailto:info@strongproductionhk.com" class="nav-cta">免費諮詢</a>
+  </nav>
+</div>
+
+<div class="podcast-hero">
+  <div class="podcast-badge">🎧 知識分享專區</div>
+  <h1>東哥說故事<br><em>為大腦注入新思維</em></h1>
+  <p>每天15分鐘，提煉一本好書精華。由 Strong Production 創辦人余震東為你導讀，探索商業、心靈與自我成長的無限可能。</p>
+</div>
+
+<div class="concept-section">
+  <div class="concept-box">
+    <h2>「好的創意，源於持續的輸入。」</h2>
+    <p>Strong Production 不只為客戶提供優質的製作與公關服務，我們更深信<strong>跨領域的知識吸收，是激發品牌靈感的最強武器</strong>。本欄目是創辦人的個人思維孵化器，我們將這些讀書心得公開分享，希望也能為你的生活與事業帶來一點啟發。</p>
+  </div>
+</div>
+
+<div class="player-section">
+  <h2 class="section-title">最新集數收聽</h2>
+  
+  <div class="player-container">
+    <!-- 這是 Buzzsprout 的 Embed Code，會自動顯示最新集數和清單 -->
+    <div id="buzzsprout-large-player"></div>
+    <script type="text/javascript" charset="utf-8" src="https://www.buzzsprout.com/2555604.js?container_id=buzzsprout-large-player&player=large"></script>
+  </div>
+
+  <div class="subscribe-platforms">
+    <a href="https://www.buzzsprout.com/2555604" target="_blank" class="platform-btn">🌐 前往 Buzzsprout 主頁</a>
+    <!-- 之後如果你上架咗 Spotify / Apple Podcast，可以喺度加多兩粒掣 -->
+    <!-- <a href="#" class="platform-btn">🟢 在 Spotify 收聽</a> -->
+    <!-- <a href="#" class="platform-btn">🟣 在 Apple Podcasts 收聽</a> -->
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Strong Production Limited · <a href="/">返回主頁</a> · <a href="mailto:info@strongproductionhk.com">info@strongproductionhk.com</a></p>
+</footer>
+
+</body>
+</html>
