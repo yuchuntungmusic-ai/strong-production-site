@@ -1,28 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- 主頁 -->
   <url>
     <loc>https://www.strongproductionhk.com/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- Blog 列表頁 -->
   <url>
     <loc>https://www.strongproductionhk.com/blog/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- Blog 文章：麥當勞 I'm Lovin' It -->
   <url>
-    <loc>https://www.strongproductionhk.com/blog/ai-seo.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.strongproductionhk.com/blog/mcdonalds-im-lovin-it.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog 文章：AI SEO -->
+  <url>
+    <loc>https://www.strongproductionhk.com/blog/ai-seo.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog 文章：品牌主題曲 -->
   <url>
     <loc>https://www.strongproductionhk.com/blog/brand-jingle.html</loc>
     <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Podcast 頁 -->
+  <url>
+    <loc>https://www.strongproductionhk.com/podcast.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
