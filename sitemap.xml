@@ -17,6 +17,14 @@
     <priority>0.9</priority>
   </url>
 
+    <!-- Blog 文章：一首歌引爆 5000 萬曝光：蜜雪冰城如何用主題曲撬動銷量增長？​ -->
+  <url>
+  <loc>https://www.strongproductionhk.com/blog/mixue-theme-song.html</loc>
+  <lastmod>2026-04-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+  
   <!-- Blog 文章：麥當勞 I'm Lovin' It -->
   <url>
     <loc>https://www.strongproductionhk.com/blog/mcdonalds-im-lovin-it.html</loc>
