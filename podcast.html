@@ -197,6 +197,166 @@
 <footer>
   <p>© 2026 Strong Production Limited · <a href="/">返回主頁</a> · <a href="mailto:info@strongproductionhk.com">info@strongproductionhk.com</a></p>
 </footer>
+<!-- PODCAST CTA SECTION -->
+<style>
+  .podcast-cta {
+    background: linear-gradient(135deg, #0d1b2a 0%, #1a3050 100%);
+    padding: 100px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .podcast-cta::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(41,171,226,0.13) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .podcast-cta::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: -60px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(41,171,226,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .podcast-cta-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .podcast-cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(41,171,226,0.12);
+    border: 1px solid rgba(41,171,226,0.35);
+    border-radius: 100px;
+    padding: 8px 22px;
+    font-size: .78rem;
+    font-weight: 800;
+    color: #29ABE2;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  .podcast-cta h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+  }
+  .podcast-cta h2 em {
+    color: #29ABE2;
+    font-style: normal;
+  }
+  .podcast-cta p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.68);
+    line-height: 1.8;
+    margin-bottom: 44px;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .podcast-cta-services {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 44px;
+  }
+  .podcast-cta-tag {
+    background: rgba(41,171,226,0.1);
+    border: 1px solid rgba(41,171,226,0.28);
+    border-radius: 100px;
+    padding: 8px 20px;
+    font-size: .82rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.82);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .podcast-cta-btns {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-podcast-primary {
+    background: #29ABE2;
+    color: #ffffff;
+    padding: 16px 40px;
+    border-radius: 100px;
+    font-size: 1rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all .2s;
+    box-shadow: 0 6px 24px rgba(41,171,226,0.38);
+    display: inline-block;
+  }
+  .btn-podcast-primary:hover {
+    background: #1a8bbf;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 32px rgba(41,171,226,0.45);
+  }
+  .btn-podcast-ghost {
+    background: transparent;
+    color: rgba(255,255,255,0.85);
+    border: 2px solid rgba(255,255,255,0.22);
+    padding: 14px 40px;
+    border-radius: 100px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all .2s;
+    display: inline-block;
+  }
+  .btn-podcast-ghost:hover {
+    border-color: #29ABE2;
+    color: #29ABE2;
+  }
+  @media (max-width: 600px) {
+    .podcast-cta { padding: 70px 24px; }
+    .podcast-cta-btns { flex-direction: column; align-items: center; }
+    .btn-podcast-primary,
+    .btn-podcast-ghost { width: 100%; max-width: 320px; text-align: center; }
+  }
+</style>
 
+<section class="podcast-cta">
+  <div class="podcast-cta-inner">
+    <div class="podcast-cta-badge">🎙️ 聲音製作服務</div>
+    <h2>你的聲音，<em>我們來打造</em></h2>
+    <p>
+      無論係 Podcast 節目、有聲書、廣播劇、語音廣告抑或企業音頻內容，<br>
+      Strong Production 提供一站式專業聲音製作服務，<br>
+      由策劃、錄音、剪接到發佈，全程陪你落地。
+    </p>
+    <div class="podcast-cta-services">
+      <div class="podcast-cta-tag">🎧 Podcast 節目製作</div>
+      <div class="podcast-cta-tag">📖 有聲書製作</div>
+      <div class="podcast-cta-tag">🎭 廣播劇 / 旁白</div>
+      <div class="podcast-cta-tag">📢 語音廣告 / Jingle</div>
+      <div class="podcast-cta-tag">🏢 企業音頻內容</div>
+    </div>
+    <div class="podcast-cta-btns">
+      <a href="mailto:info@strongproductionhk.com?subject=聲音製作查詢" class="btn-podcast-primary">
+        立即查詢 →
+      </a>
+      <a href="https://wa.me/85265000274" target="_blank" rel="noopener noreferrer" class="btn-podcast-ghost">
+        WhatsApp 我們
+      </a>
+    </div>
+  </div>
+</section>
 </body>
 </html>
