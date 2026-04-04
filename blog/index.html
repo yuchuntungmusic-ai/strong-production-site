@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog · 品牌營銷洞察｜Strong Production 香港</title>
   <meta name="description" content="Strong Production香港官方Blog，涵蓋品牌主題曲、洗腦廣告歌、公關服務、KOL推廣、Rebranding等品牌營銷最新洞察與實戰攻略。">
-  <meta name="keywords" content="品牌主題曲, 洗腦廣告歌, 公關服務香港, KOL推廣, Rebranding, 品牌營銷">
-  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.strongproductionhk.com/blog/">
-  <meta property="og:type" content="website">
   <meta property="og:title" content="Blog · 品牌營銷洞察｜Strong Production 香港">
   <meta property="og:url" content="https://www.strongproductionhk.com/blog/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
     :root{--sky:#29ABE2;--sky-dark:#1a8bbf;--sky-light:#e8f7fd;--sky-mid:#b3e5f8;--white:#ffffff;--dark:#0d1b2a;--grey:#5a6a7a;--grey-light:#f4f9fc;--border:#d0ecf8}
     *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:"Helvetica Neue",Arial,"PingFang HK",sans-serif;color:var(--dark);background:var(--white);padding-top:100px}
+    body{font-family:'Noto Sans HK','Helvetica Neue',Arial,'PingFang HK',sans-serif;color:var(--dark);background:var(--white);padding-top:100px}
     a{text-decoration:none;color:inherit}
     .nav-wrapper{position:fixed;top:16px;left:0;width:100%;z-index:999;display:flex;justify-content:center;pointer-events:none}
     nav{pointer-events:auto;background:rgba(255,255,255,0.92);backdrop-filter:blur(14px);border:1px solid rgba(41,171,226,0.18);box-shadow:0 8px 32px rgba(0,0,0,0.07);display:flex;align-items:center;justify-content:space-between;padding:8px 10px 8px 20px;border-radius:100px;width:94%;max-width:1200px}
@@ -36,10 +36,10 @@
     .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
     .post-card{background:var(--white);border:1.5px solid var(--border);border-radius:18px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
     .post-card:hover{border-color:var(--sky);box-shadow:0 8px 32px rgba(41,171,226,0.1);transform:translateY(-4px)}
-    .post-card:hover img{transform:scale(1.05)}
-    .post-thumb{height:180px;display:flex;align-items:center;justify-content:center;background:#000;overflow:hidden}
-    .post-thumb img{width:100%;height:100%;object-fit:cover;opacity:0.85;transition:transform 0.5s ease}
-    .post-thumb-fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem}
+    .post-card:hover .post-thumb img{transform:scale(1.05)}
+    .post-thumb{height:180px;overflow:hidden;background:#0d1b2a;display:flex;align-items:center;justify-content:center}
+    .post-thumb img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease}
+    .post-thumb-emoji{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem}
     .post-body{padding:24px;display:flex;flex-direction:column;flex:1}
     .post-cat-tag{font-size:.7rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--sky);margin-bottom:10px}
     .post-card h2{font-size:1rem;font-weight:800;line-height:1.55;margin-bottom:10px;color:var(--dark);flex:1}
@@ -90,7 +90,23 @@
 <div class="blog-section">
   <div class="blog-grid">
 
-        <!-- 新文章：蜜雪冰城 ← 最新 -->
+    <!-- 最新：Rebranding -->
+    <a href="/blog/rebranding-strategy.html" class="post-card">
+      <div class="post-thumb">
+        <img src="/blog/rebranding-cover.jpg" alt="品牌蛻變 Rebranding">
+      </div>
+      <div class="post-body">
+        <div class="post-cat-tag">♻️ Rebranding</div>
+        <h2>客人係咪覺得你哋「老土」？品牌蛻變的正確方法</h2>
+        <p>唔係產品有問題，係品牌語言同市場脫節。一次有策略的蛻變，讓年輕一代重新記住你。</p>
+        <div class="post-footer">
+          <span>📅 2026年4月5日</span>
+          <span class="read-more">閱讀更多 →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- 蜜雪冰城 -->
     <a href="/blog/mixue-theme-song.html" class="post-card">
       <div class="post-thumb">
         <img src="/blog/ice-01.jpg" alt="蜜雪冰城主題曲行銷案例">
@@ -104,9 +120,9 @@
           <span class="read-more">閱讀更多 →</span>
         </div>
       </div>
-    </a>>
+    </a>
 
-    <!-- 文章：麥當勞 I'm Lovin' It -->
+    <!-- 麥當勞 -->
     <a href="/blog/mcdonalds-im-lovin-it.html" class="post-card">
       <div class="post-thumb">
         <img src="/blog/McD-imlovinit-site__78488.jpg" alt="麥當勞 I'm Lovin' It">
@@ -122,7 +138,7 @@
       </div>
     </a>
 
-    <!-- 文章：AI SEO -->
+    <!-- AI SEO -->
     <a href="/blog/ai-seo.html" class="post-card">
       <div class="post-thumb">
         <img src="/blog/ai-marketing.png" alt="AI SEO">
@@ -138,7 +154,7 @@
       </div>
     </a>
 
-    <!-- 文章：品牌主題曲 -->
+    <!-- 品牌主題曲 -->
     <a href="/blog/brand-jingle.html" class="post-card">
       <div class="post-thumb">
         <img src="/blog/pexels-odin-reyna-383507-6860630.jpg" alt="品牌主題曲">
