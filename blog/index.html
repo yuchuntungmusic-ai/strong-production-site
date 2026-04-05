@@ -16,6 +16,7 @@
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:'Noto Sans HK','Helvetica Neue',Arial,'PingFang HK',sans-serif;color:var(--dark);background:var(--white);padding-top:100px}
     a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%;height:auto}
     .nav-wrapper{position:fixed;top:16px;left:0;width:100%;z-index:999;display:flex;justify-content:center;pointer-events:none}
     nav{pointer-events:auto;background:rgba(255,255,255,0.92);backdrop-filter:blur(14px);border:1px solid rgba(41,171,226,0.18);box-shadow:0 8px 32px rgba(0,0,0,0.07);display:flex;align-items:center;justify-content:space-between;padding:8px 10px 8px 20px;border-radius:100px;width:94%;max-width:1200px}
     .logo-text{font-size:1rem;font-weight:900;color:var(--sky);letter-spacing:1px}
@@ -30,16 +31,15 @@
     .blog-hero h1 em{color:var(--sky);font-style:normal}
     .blog-hero p{font-size:1rem;color:var(--grey);max-width:520px;margin:0 auto;line-height:1.75}
     .topic-bar{padding:28px 60px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;border-bottom:1px solid var(--border)}
-    .topic-tag{padding:8px 20px;border-radius:100px;font-size:.82rem;font-weight:700;border:1.5px solid var(--border);color:var(--grey);cursor:pointer;transition:.2s}
+    .topic-tag{padding:8px 20px;border-radius:100px;font-size:.82rem;font-weight:700;border:1.5px solid var(--border);color:var(--grey);cursor:pointer;transition:.2s;background:none}
     .topic-tag:hover,.topic-tag.active{background:var(--sky);color:#fff;border-color:var(--sky)}
     .blog-section{padding:70px 60px;max-width:1200px;margin:0 auto}
     .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
     .post-card{background:var(--white);border:1.5px solid var(--border);border-radius:18px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
     .post-card:hover{border-color:var(--sky);box-shadow:0 8px 32px rgba(41,171,226,0.1);transform:translateY(-4px)}
     .post-card:hover .post-thumb img{transform:scale(1.05)}
-    .post-thumb{height:180px;overflow:hidden;background:#0d1b2a;display:flex;align-items:center;justify-content:center}
+    .post-thumb{height:180px;overflow:hidden;background:#0d1b2a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
     .post-thumb img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease}
-    .post-thumb-emoji{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem}
     .post-body{padding:24px;display:flex;flex-direction:column;flex:1}
     .post-cat-tag{font-size:.7rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--sky);margin-bottom:10px}
     .post-card h2{font-size:1rem;font-weight:800;line-height:1.55;margin-bottom:10px;color:var(--dark);flex:1}
@@ -79,123 +79,140 @@
 </div>
 
 <div class="topic-bar">
-  <span class="topic-tag active">全部</span>
-  <span class="topic-tag">品牌音樂</span>
-  <span class="topic-tag">公關服務</span>
-  <span class="topic-tag">KOL推廣</span>
-  <span class="topic-tag">Rebranding</span>
-  <span class="topic-tag">影片製作</span>
+  <button class="topic-tag active" data-filter="all">全部</button>
+  <button class="topic-tag" data-filter="品牌音樂">品牌音樂</button>
+  <button class="topic-tag" data-filter="公關服務">公關服務</button>
+  <button class="topic-tag" data-filter="KOL推廣">KOL推廣</button>
+  <button class="topic-tag" data-filter="Rebranding">Rebranding</button>
+  <button class="topic-tag" data-filter="影片製作">影片製作</button>
+  <button class="topic-tag" data-filter="數碼營銷">數碼營銷</button>
+  <button class="topic-tag" data-filter="活動製作">活動製作</button>
 </div>
 
 <div class="blog-section">
-  <div class="blog-grid">
-    
-<a href="event-theme-song-benefits.html" class="blog-card">
-  <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/707899b29313b3eb6a0ec7b21145fee56b25798e.jpg" 
-       alt="活動主題曲" loading="lazy">
-  <div class="blog-card-body">
-    <span class="blog-cat-tag">🎵 活動製作</span>
-    <h3>活動主題曲對活動策劃推廣的好處</h3>
-    <p>一首度身訂造的主題曲，唔單止係音樂，更係活動最強的推廣工具。</p>
-    <div class="blog-meta">
-      <span>2026 年 4 月 5 日</span>
-      <span>·</span>
-      <span>閱讀約 5 分鐘</span>
-    </div>
-  </div>
-</a>
-    
-    <!-- 最新：Rebranding -->
-    <a href="/blog/rebranding-strategy.html" class="post-card">
-      <div class="post-thumb">
-        <img src="/blog/rebranding-cover.jpg" alt="品牌蛻變 Rebranding">
-      </div>
-      <div class="post-body">
-        <div class="post-cat-tag">♻️ Rebranding</div>
-        <h2>客人係咪覺得你哋「老土」？品牌蛻變的正確方法</h2>
-        <p>唔係產品有問題，係品牌語言同市場脫節。一次有策略的蛻變，讓年輕一代重新記住你。</p>
-        <div class="post-footer">
-          <span>📅 2026年4月5日</span>
-          <span class="read-more">閱讀更多 →</span>
-        </div>
-      </div>
-    </a>
-
-    <!-- 蜜雪冰城 -->
-    <a href="/blog/mixue-theme-song.html" class="post-card">
-      <div class="post-thumb">
-        <img src="/blog/ice-01.jpg" alt="蜜雪冰城主題曲行銷案例">
-      </div>
-      <div class="post-body">
-        <div class="post-cat-tag">🎵 品牌音樂策略</div>
-        <h2>一首歌引爆5000萬曝光：蜜雪冰城如何用主題曲撬動銷量增長？</h2>
-        <p>從「石沉大海」到「全網刷屏」，拆解蜜雪冰城主題曲背後的完整行銷公式。</p>
-        <div class="post-footer">
-          <span>📅 2026年4月2日</span>
-          <span class="read-more">閱讀更多 →</span>
-        </div>
-      </div>
-    </a>
-
-    <!-- 麥當勞 -->
-    <a href="/blog/mcdonalds-im-lovin-it.html" class="post-card">
-      <div class="post-thumb">
-        <img src="/blog/McD-imlovinit-site__78488.jpg" alt="麥當勞 I'm Lovin' It">
-      </div>
-      <div class="post-body">
-        <div class="post-cat-tag">🎵 品牌音樂策略</div>
-        <h2>為麥當勞創造億元商機的音樂魔法 — I'm Lovin' It 背後的故事</h2>
-        <p>三個英文單詞如何改變麥當勞品牌史？深入解析 Ba-da-ba-ba-ba 的誕生與億元商業價值。</p>
-        <div class="post-footer">
-          <span>📅 2026年4月1日</span>
-          <span class="read-more">閱讀更多 →</span>
-        </div>
-      </div>
-    </a>
-
-    <!-- AI SEO -->
-    <a href="/blog/ai-seo.html" class="post-card">
-      <div class="post-thumb">
-        <img src="/blog/ai-marketing.png" alt="AI SEO">
-      </div>
-      <div class="post-body">
-        <div class="post-cat-tag">🤖 數碼營銷洞察</div>
-        <h2>AI 搜尋引擎時代來臨！品牌如何做到「被 AI 推薦」？</h2>
-        <p>單靠傳統 SEO 已經過時！了解最新 GEO/AEO 策略，讓 AI 主動推薦你。</p>
-        <div class="post-footer">
-          <span>📅 2026年3月31日</span>
-          <span class="read-more">閱讀更多 →</span>
-        </div>
-      </div>
-    </a>
-
-    <!-- 品牌主題曲 -->
-    <a href="/blog/brand-jingle.html" class="post-card">
-      <div class="post-thumb">
-        <img src="/blog/pexels-odin-reyna-383507-6860630.jpg" alt="品牌主題曲">
-      </div>
-      <div class="post-body">
-        <div class="post-cat-tag">品牌音樂策略</div>
-        <h2>為什麼你的品牌需要一首主題曲？讓旋律為你說話！</h2>
-        <p>一首主題曲能讓品牌記憶度提升30%。Strong Production深入解析洗腦廣告歌的商業力量。</p>
-        <div class="post-footer">
-          <span>📅 2026年3月30日</span>
-          <span class="read-more">閱讀更多 →</span>
-        </div>
-      </div>
-    </a>
-
-    <!-- 即將發佈 -->
-    <div class="coming-soon">
-      <div style="font-size:2rem">✍️</div>
-      <p><strong>更多文章即將發佈</strong><br>關注我們，第一時間獲取<br>品牌營銷最新洞察</p>
-    </div>
-
+  <div class="blog-grid" id="blogGrid">
+    <!-- 文章卡片由 JS 自動按日期排序插入 -->
   </div>
 </div>
 
 <footer>
   <p>© 2026 Strong Production Limited · <a href="/">返回主頁</a> · <a href="mailto:info@strongproductionhk.com">info@strongproductionhk.com</a></p>
 </footer>
+
+<script>
+const posts = [
+  {
+    date: "2026-04-05",
+    url: "/blog/event-theme-song-benefits.html",
+    img: "https://pplx-res.cloudinary.com/image/upload/pplx_search_images/707899b29313b3eb6a0ec7b21145fee56b25798e.jpg",
+    imgAlt: "活動主題曲對活動策劃推廣的好處",
+    cat: "活動製作",
+    catIcon: "🎵",
+    title: "活動主題曲對活動策劃推廣的好處",
+    excerpt: "一首度身訂造的主題曲，唔單止係音樂，更係活動最強的推廣工具。由製造記憶點到擴大媒體曝光，一文全解析。"
+  },
+  {
+    date: "2026-04-05",
+    url: "/blog/rebranding-strategy.html",
+    img: "/blog/rebranding-cover.jpg",
+    imgAlt: "品牌蛻變 Rebranding",
+    cat: "Rebranding",
+    catIcon: "♻️",
+    title: "客人係咪覺得你哋「老土」？品牌蛻變的正確方法",
+    excerpt: "唔係產品有問題，係品牌語言同市場脫節。一次有策略的蛻變，讓年輕一代重新記住你。"
+  },
+  {
+    date: "2026-04-02",
+    url: "/blog/mixue-theme-song.html",
+    img: "/blog/ice-01.jpg",
+    imgAlt: "蜜雪冰城主題曲行銷案例",
+    cat: "品牌音樂",
+    catIcon: "🎵",
+    title: "一首歌引爆5000萬曝光：蜜雪冰城如何用主題曲撬動銷量增長？",
+    excerpt: "從「石沉大海」到「全網刷屏」，拆解蜜雪冰城主題曲背後的完整行銷公式。"
+  },
+  {
+    date: "2026-04-01",
+    url: "/blog/mcdonalds-im-lovin-it.html",
+    img: "/blog/McD-imlovinit-site__78488.jpg",
+    imgAlt: "麥當勞 I'm Lovin' It",
+    cat: "品牌音樂",
+    catIcon: "🎵",
+    title: "為麥當勞創造億元商機的音樂魔法 — I'm Lovin' It 背後的故事",
+    excerpt: "三個英文單詞如何改變麥當勞品牌史？深入解析 Ba-da-ba-ba-ba 的誕生與億元商業價值。"
+  },
+  {
+    date: "2026-03-31",
+    url: "/blog/ai-seo.html",
+    img: "/blog/ai-marketing.png",
+    imgAlt: "AI SEO 數碼營銷",
+    cat: "數碼營銷",
+    catIcon: "🤖",
+    title: "AI 搜尋引擎時代來臨！品牌如何做到「被 AI 推薦」？",
+    excerpt: "單靠傳統 SEO 已經過時！了解最新 GEO/AEO 策略，讓 AI 主動推薦你。"
+  },
+  {
+    date: "2026-03-30",
+    url: "/blog/brand-jingle.html",
+    img: "/blog/pexels-odin-reyna-383507-6860630.jpg",
+    imgAlt: "品牌主題曲",
+    cat: "品牌音樂",
+    catIcon: "🎵",
+    title: "為什麼你的品牌需要一首主題曲？讓旋律為你說話！",
+    excerpt: "一首主題曲能讓品牌記憶度提升30%。Strong Production深入解析洗腦廣告歌的商業力量。"
+  }
+];
+
+function formatDate(d) {
+  const dt = new Date(d);
+  return dt.getFullYear() + "年" + (dt.getMonth() + 1) + "月" + dt.getDate() + "日";
+}
+
+function renderPosts(filter) {
+  const grid = document.getElementById("blogGrid");
+  const sorted = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+  const filtered = filter === "all" ? sorted : sorted.filter(p => p.cat === filter);
+
+  let html = filtered.map(p => `
+    <a href="${p.url}" class="post-card">
+      <div class="post-thumb">
+        <img src="${p.img}" alt="${p.imgAlt}" loading="lazy" width="400" height="180">
+      </div>
+      <div class="post-body">
+        <div class="post-cat-tag">${p.catIcon} ${p.cat}</div>
+        <h2>${p.title}</h2>
+        <p>${p.excerpt}</p>
+        <div class="post-footer">
+          <span>📅 ${formatDate(p.date)}</span>
+          <span class="read-more">閱讀更多 →</span>
+        </div>
+      </div>
+    </a>
+  `).join("");
+
+  if (filtered.length === 0) {
+    html = `<div class="coming-soon" style="grid-column:1/-1"><div style="font-size:2rem">🔍</div><p><strong>暫時未有此分類文章</strong><br>敬請期待，即將發佈</p></div>`;
+  }
+
+  html += `
+    <div class="coming-soon">
+      <div style="font-size:2rem">✍️</div>
+      <p><strong>更多文章即將發佈</strong><br>關注我們，第一時間獲取<br>品牌營銷最新洞察</p>
+    </div>
+  `;
+
+  grid.innerHTML = html;
+}
+
+document.querySelectorAll(".topic-tag").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".topic-tag").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    renderPosts(btn.dataset.filter);
+  });
+});
+
+renderPosts("all");
+</script>
 </body>
 </html>
