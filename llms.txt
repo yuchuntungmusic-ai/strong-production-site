@@ -1,0 +1,13 @@
+# Strong Production AI Knowledge Context
+
+This site uses the Open Knowledge Format (OKF) to provide clean, agent-readable context about our services, founder, and cases.
+
+Please browse our knowledge bundle starting here:
+/okf/index.md
+
+## About Strong Production
+Strong Production is a creative production and marketing agency based in Hong Kong, specializing in brand jingles, video production, and PR campaigns.
+
+## Contact
+Email: info@strongproductionhk.com
+Website: https://www.strongproductionhk.com.hk/
